@@ -1,0 +1,41 @@
+{
+  "tanggal": "Rabu, 25 November 2026",
+  "judul": "Selamat Hari Guru Nasional",
+  "untuk": "Ibu Pauriah",
+  "dari": "Kelas 6",
+  "sekolah": "MIN 4 BATANGHARI",
+
+  "foto": [
+    { "src": "/assets/foto/kelas.jpeg", "caption": "Kelas tempat kami belajar" },
+    { "src": "/assets/foto/guru.jpeg", "caption": "Guru yang luar biasa" },
+    { "src": "/assets/foto/bunga.jpeg", "caption": "Bunga kecil dari kami" },
+    { "src": "/assets/foto/belajar.jpeg", "caption": "Belajar di kelas" },
+    { "src": "/assets/foto/sekolah.jpeg", "caption": "Sekolah, rumah kedua kami" }
+  ],
+
+  "lagu": {
+    "tipe": "audio",
+    "src": "/assets/lagu/lagu-guru.mp3",
+    "judul": "Lagu untuk Guru",
+    "artis": "Contoh lagu, ganti dengan lagu pilihanmu"
+  },
+
+  "pesan": [
+    { "dari": "siswa", "isi": "Terima kasih sudah sabar mengulang materi yang sama sampai kami paham." },
+    { "dari": "siswa", "isi": "Dulu saya takut matematika. Sekarang malah jadi pelajaran favorit." },
+    { "dari": "siswa", "isi": "Nasihat Ibu waktu saya hampir menyerah tidak akan saya lupakan." },
+    { "dari": "siswa", "isi": "Maaf sering ribut di kelas, Pak. Tapi kami selalu dengar, kok." },
+    { "dari": "siswa", "isi": "Semoga Bapak dan Ibu selalu sehat dan bahagia." },
+    { "dari": "siswa", "isi": "Guru terbaik adalah yang membuat kami ingin belajar sendiri." }
+  ],
+
+  "rapor": [
+    { "aspek": "Kesabaran", "nilai": 100, "ket": "Tak terhingga" },
+    { "aspek": "Ketulusan", "nilai": 100, "ket": "Sangat baik sekali" },
+    { "aspek": "Cara menjelaskan", "nilai": 100, "ket": "Mudah dipahami" },
+    { "aspek": "Semangat mengajar", "nilai": 100, "ket": "Tidak pernah padam" },
+    { "aspek": "Kepedulian pada murid", "nilai": 100, "ket": "Melebihi tugas" }
+  ],
+
+  "penutup": "Ilmu yang Bapak dan Ibu tanamkan akan terus kami bawa ke mana pun kami melangkah. Selamat Hari Guru Nasional."
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Selamat Hari Guru Nasional</title>
+  <meta name="description" content="Ucapan terima kasih untuk Bapak dan Ibu Guru di Hari Guru Nasional, 25 November.">
+  <meta name="theme-color" content="#2E4A3D">
+  <link rel="preload" href="/fonts/schoolbell-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+  <!-- Filter tekstur kapur -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="chalk" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" result="rough"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -1.3 1.4" result="speck"/>
+      <feComposite in="rough" in2="speck" operator="in"/>
+    </filter>
+    <symbol id="i-bell" viewBox="0 0 48 48">
+      <path d="M24 6a3 3 0 0 1 3 3v1.3c6.3 1.4 10 6.8 10 13.7v7l3.5 4.2c.7.9.1 2.3-1.1 2.3H8.6c-1.2 0-1.8-1.4-1.1-2.3L11 31v-7c0-6.9 3.7-12.3 10-13.7V9a3 3 0 0 1 3-3Z"/>
+      <path d="M19 40h10a5 5 0 0 1-10 0Z"/>
+    </symbol>
+  </svg>
+
+  <!-- =========================================================
+       1. PAPAN TULIS
+       ========================================================= -->
+  <header class="board" id="top">
+    <div class="board__surface">
+      <p class="chalk board__date" id="tanggal">Rabu, 25 November 2026</p>
+
+      <!-- coretan kapur di papan -->
+      <div class="doodles" aria-hidden="true">
+        <span class="doodle d1">1 + 1 = 2</span>
+        <span class="doodle d2">Ini Budi</span>
+        <span class="doodle d3">a² + b² = c²</span>
+        <span class="doodle d4">A B C</span>
+        <span class="doodle d5">H₂O</span>
+        <svg class="doodle d6" viewBox="0 0 60 60"><path d="M30 6l7 15 16 2-12 11 3 16-14-8-14 8 3-16L7 23l16-2Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+        <svg class="doodle d7" viewBox="0 0 80 60"><path d="M8 50 40 10 72 50Z M8 50h64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      </div>
+
+      <h1 class="chalk board__title" id="judul" aria-label="Selamat Hari Guru Nasional">
+        <span class="line">Selamat</span>
+        <span class="line">Hari Guru</span>
+        <span class="line">Nasional</span>
+      </h1>
+      <p class="chalk board__to"><span id="untuk">Terima kasih, Bapak dan Ibu Guru</span>
+        <svg class="board__underline" viewBox="0 0 300 16" preserveAspectRatio="none" aria-hidden="true"><path d="M4 10C70 4 150 14 296 6"/></svg>
+      </p>
+
+      <div class="board__actions">
+        <button class="bell" id="bellBtn" type="button">
+          <svg aria-hidden="true"><use href="#i-bell"/></svg>
+          <span>Bunyikan bel</span>
+        </button>
+        <p class="board__hint">Nyalakan suara HP-mu, ada lagu di dalamnya.</p>
+      </div>
+    </div>
+
+    <!-- tempat kapur -->
+    <div class="tray" aria-hidden="true">
+      <i class="stick s-white"></i><i class="stick s-yellow"></i><i class="stick s-pink"></i>
+      <i class="eraser"></i>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. MADING KELAS
+       ========================================================= -->
+  <main class="cork">
+    <section class="mading" aria-labelledby="h-mading">
+      <h2 class="cutout" id="h-mading" data-text="Mading Kenangan">Mading Kenangan</h2>
+      <p class="pin-note">Ketuk foto untuk melihat lebih besar</p>
+      <div class="prints" id="prints"></div>
+    </section>
+
+    <section class="notice" aria-labelledby="h-lagu" id="songBox">
+      <div class="notice__paper">
+        <span class="tape tape--l" aria-hidden="true"></span><span class="tape tape--r" aria-hidden="true"></span>
+        <p class="notice__kicker">Pengumuman</p>
+        <h2 class="notice__title" id="h-lagu">Lagu untuk Bapak dan Ibu Guru</h2>
+        <div class="player" id="player">
+          <button class="player__btn" id="playBtn" type="button" aria-label="Putar lagu">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+          </button>
+          <div class="player__info">
+            <p class="player__song"><span id="songTitle"></span>
+              <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></p>
+            <p class="player__artist" id="songArtist"></p>
+            <input class="player__seek" id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Posisi lagu">
+            <div class="player__time"><span id="tNow">0:00</span><span id="tDur">0:00</span></div>
+          </div>
+        </div>
+        <div class="embed" id="embed" hidden></div>
+      </div>
+    </section>
+
+    <section class="notes-wrap" aria-labelledby="h-pesan">
+      <h2 class="label" id="h-pesan">Pesan dari kami</h2>
+      <div class="notes" id="notes"></div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       3. RAPOR UNTUK GURU
+       ========================================================= -->
+  <section class="desk" aria-labelledby="h-rapor">
+    <article class="report" id="report">
+      <header class="report__head">
+        <p>Laporan Hasil Penilaian</p>
+        <h2 id="h-rapor">Rapor untuk Guru</h2>
+      </header>
+      <dl class="report__meta">
+        <div><dt>Nama</dt><dd id="rUntuk"></dd></div>
+        <div><dt>Penilai</dt><dd id="rDari"></dd></div>
+        <div><dt>Semester</dt><dd>Sepanjang masa</dd></div>
+        <div><dt>Tahun</dt><dd id="rTahun">2026</dd></div>
+      </dl>
+      <table class="report__table">
+        <thead><tr><th>No</th><th>Aspek</th><th>Nilai</th><th class="col-ket">Keterangan</th></tr></thead>
+        <tbody id="rBody"></tbody>
+      </table>
+      <p class="report__result">Keputusan: <strong>Guru terbaik, tanpa syarat.</strong></p>
+      <div class="report__sign">
+        <div>
+          <p>Mengetahui,</p>
+          <p class="report__signname" id="rSign"></p>
+        </div>
+        <div class="stamp" id="stamp" aria-hidden="true">
+          <span>Terima kasih</span><b>100</b><span id="stampYear">Hari Guru 2026</span>
+        </div>
+      </div>
+      <button class="btn-stamp" id="stampBtn" type="button">Bubuhkan stempel</button>
+    </article>
+  </section>
+
+  <!-- =========================================================
+       4. PENUTUP
+       ========================================================= -->
+  <footer class="closing">
+    <p class="chalk closing__text" id="penutup"></p>
+    <p class="chalk closing__from">Dari kami, <span id="dari"></span></p>
+    <p class="closing__school" id="sekolah"></p>
+  </footer>
+
+  <!-- pemutar mini -->
+  <button class="mini" id="mini" type="button" hidden>
+    <span class="eq eq--on" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span id="miniLabel">Jeda lagu</span>
+  </button>
+
+  <!-- foto besar -->
+  <dialog class="viewer" id="viewer" aria-label="Foto">
+    <figure class="viewer__photo">
+      <img id="viewerImg" alt="">
+      <figcaption id="viewerCap"></figcaption>
+    </figure>
+    <div class="viewer__nav">
+      <button type="button" id="prevBtn" aria-label="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6l-6 6 6 6"/></svg></button>
+      <span id="viewerCount"></span>
+      <button type="button" id="nextBtn" aria-label="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6l6 6-6 6"/></svg></button>
+    </div>
+    <button class="viewer__close" type="button" id="closeBtn" aria-label="Tutup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </dialog>
+
+  <audio id="audio" preload="metadata"></audio>
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
