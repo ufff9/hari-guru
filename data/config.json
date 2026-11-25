@@ -8,7 +8,7 @@
   "foto": [
     { "src": "/assets/foto/kelas.jpeg", "caption": "Kelas tempat kami belajar" },
     { "src": "/assets/foto/guru.jpeg", "caption": "Guru yang luar biasa" },
-    { "src": "/assets/foto/bunga.jpeg", "caption": "Bunga kecil dari kami" },
+    { "src": "/assets/foto/perpisahan.jpeg", "caption": "Perpisahan yang tak terlupakan" },
     { "src": "/assets/foto/belajar.jpeg", "caption": "Belajar di kelas" },
     { "src": "/assets/foto/sekolah.jpeg", "caption": "Sekolah, rumah kedua kami" }
   ],
@@ -17,7 +17,7 @@
     "tipe": "audio",
     "src": "/assets/lagu/lagu-guru.mp3",
     "judul": "Lagu untuk Guru",
-    "artis": "Contoh lagu, ganti dengan lagu pilihanmu"
+    "artis": ""
   },
 
   "pesan": [
